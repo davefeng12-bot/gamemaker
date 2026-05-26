@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第一章：犁刀村 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Rye&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <img src="images/rdr2-logo.png" alt="RDR2 Logo">
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link active">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="mission-hero">
+        <div class="mission-hero-overlay"></div>
+        <div class="mission-hero-content">
+            <span class="chapter-badge">第一章</span>
+            <h1 class="mission-title">雪中绝境：犁刀村</h1>
+            <p class="mission-subtitle">The Aftermath of Genesis</p>
+        </div>
+    </section>
+
+    <main class="content-wrapper mission-main">
+        <div class="mission-info-cards">
+            <div class="info-card">
+                <div class="info-icon">📋</div>
+                <div class="info-content">
+                    <span class="info-label">任务类型</span>
+                    <span class="info-value">主线任务</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⭐</div>
+                <div class="info-content">
+                    <span class="info-label">难度等级</span>
+                    <span class="info-value">简单</span>
+                    <div class="difficulty-stars">
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star filled">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">⏱️</div>
+                <div class="info-content">
+                    <span class="info-label">预计时长</span>
+                    <span class="info-value">30-45分钟</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="info-icon">💰</div>
+                <div class="info-content">
+                    <span class="info-label">章节奖励</span>
+                    <span class="info-value">$500+</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-content">
+            <div class="mission-main-content">
+                <section class="mission-section">
+                    <h2 class="section-title">🎯 任务概述</h2>
+                    <div class="section-content">
+                        <p>第一章是游戏的开场章节，范德林德帮在一次失败的抢劫后被迫逃到雪山地区。玩家将控制亚瑟·摩根，学习游戏的基本操作和机制，了解帮派成员，并为接下来的冒险做好准备。</p>
+                        <div class="mission-image">
+                            <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20camp%20in%20snow%20mountains%20Van%20der%20Linde%20gang&image_size=landscape_16_9" alt="第一章场景">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mission-section">
+                    <h2 class="section-title">📝 任务步骤</h2>
+                    <div class="steps-container">
+                        <div class="step-card">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h3>进入西部</h3>
+                                <p>跟随何西阿前往马厩，学习骑马操作和基本移动控制。这是你在游戏中的第一次骑马体验。</p>
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20horse%20riding%20snow%20western&image_size=landscape_16_9" alt="进入西部">
+                                <div class="step-tips">
+                                    <strong>💡 提示：</strong>按住加速键可以让马匹奔跑，但要注意马匹的耐力条。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h3>劫后余波</h3>
+                                <p>清理营地周围的威胁，帮助帮派成员建立临时营地。这是你第一次接触战斗系统。</p>
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20camp%20defense%20combat%20snow&image_size=landscape_16_9" alt="劫后余波">
+                                <div class="step-tips">
+                                    <strong>💡 提示：</strong>使用死亡之眼可以放慢时间，帮助你精准瞄准敌人。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h3>老朋友粉墨登场</h3>
+                                <p>与达奇和帮派成员会面，了解当前形势和下一步计划。</p>
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20Dutch%20van%20der%20Linde%20gang%20meeting&image_size=landscape_16_9" alt="老朋友粉墨登场">
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h3>谁是雷威提克斯？</h3>
+                                <p>追踪并审问目标，获取关键情报。这是一个重要的剧情任务。</p>
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20interrogation%20scene%20western&image_size=landscape_16_9" alt="谁是雷威提克斯">
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h3>西部亡命徒</h3>
+                                <p>完成第一章的最终任务，带领帮派离开雪山，前往新的营地。</p>
+                                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20cowboy%20riding%20into%20sunset%20western&image_size=landscape_16_9" alt="西部亡命徒">
+                                <div class="step-tips">
+                                    <strong>🎉 完成后：</strong>解锁第二章"马掌望台"区域和更多任务。
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="mission-section">
+                    <h2 class="section-title">🏆 Gold Medal 条件</h2>
+                    <div class="gold-medal-container">
+                        <div class="gold-medal-header">
+                            <span class="gold-icon">🥇</span>
+                            <span>金牌评价要求</span>
+                        </div>
+                        <table class="gold-medal-table">
+                            <thead>
+                                <tr>
+                                    <th>任务</th>
+                                    <th>条件1</th>
+                                    <th>条件2</th>
+                                    <th>条件3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>进入西部</strong></td>
+                                    <td>剩余时间大于80%</td>
+                                    <td>不使用死亡之眼</td>
+                                    <td>无额外伤害</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>劫后余波</strong></td>
+                                    <td>爆头击杀5人</td>
+                                    <td>剩余时间大于70%</td>
+                                    <td>不使用消耗品</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>老朋友粉墨登场</strong></td>
+                                    <td>剩余时间大于85%</td>
+                                    <td>完美完成对话</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>谁是雷威提克斯？</strong></td>
+                                    <td>剩余时间大于75%</td>
+                                    <td>成功审问目标</td>
+                                    <td>不被发现</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>西部亡命徒</strong></td>
+                                    <td>剩余时间大于70%</td>
+                                    <td>保护所有同伴</td>
+                                    <td>无死亡</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="mission-section">
+                    <h2 class="section-title">💡 攻略要点</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <span class="tip-icon">🐴</span>
+                            <h4>熟悉骑马操作</h4>
+                            <p>骑马是游戏中最重要的移动方式，花时间练习加速、刹车和跳跃。</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">💾</span>
+                            <h4>及时保存游戏</h4>
+                            <p>在重要任务前保存，避免意外死亡导致进度丢失。</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🏕️</span>
+                            <h4>营地互动</h4>
+                            <p>与营地成员互动可以提升好感度，解锁额外剧情。</p>
+                        </div>
+                        <div class="tip-card">
+                            <span class="tip-icon">🎯</span>
+                            <h4>死亡之眼练习</h4>
+                            <p>多练习死亡之眼的使用，这在战斗中非常重要。</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <aside class="mission-sidebar">
+                <div class="sidebar-section">
+                    <h3>📋 任务进度</h3>
+                    <div class="progress-list">
+                        <div class="progress-item completed">
+                            <input type="checkbox" checked disabled>
+                            <span>进入西部</span>
+                        </div>
+                        <div class="progress-item completed">
+                            <input type="checkbox" checked disabled>
+                            <span>劫后余波</span>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" disabled>
+                            <span>老朋友粉墨登场</span>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" disabled>
+                            <span>谁是雷威提克斯？</span>
+                        </div>
+                        <div class="progress-item">
+                            <input type="checkbox" disabled>
+                            <span>西部亡命徒</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🔗 相关攻略</h3>
+                    <ul>
+                        <li><a href="missions.html">返回任务列表</a></li>
+                        <li><a href="guide.html">新手入门指南</a></li>
+                        <li><a href="combat.html">战斗系统详解</a></li>
+                        <li><a href="guide.html#horse">马匹养成指南</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3>🎮 章节导航</h3>
+                    <div class="chapter-nav">
+                        <a href="#" class="chapter-link current">第一章</a>
+                        <a href="missions.html" class="chapter-link">第二章</a>
+                        <a href="missions.html" class="chapter-link">第三章</a>
+                        <a href="missions.html" class="chapter-link">第四章</a>
+                        <a href="missions.html" class="chapter-link">第五章</a>
+                        <a href="missions.html" class="chapter-link">第六章</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🤠 任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                    <li><a href="missions.html#gold">金牌条件</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>💎 收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                    <li><a href="collectibles.html#cards">香烟卡</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📖 游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="guide.html#horse">马匹养成</a></li>
+                    <li><a href="guide.html#honor">荣誉系统</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>🎬 游戏视频</h3>
+                <ul>
+                    <li><a href="videos.html#walkthrough">剧情攻略</a></li>
+                    <li><a href="videos.html#combat">战斗技巧</a></li>
+                    <li><a href="videos.html#exploration">探索发现</a></li>
+                    <li><a href="videos.html#funny">搞笑时刻</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南 | 西部世界的终极探索</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                performSearch(query);
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    performSearch(query);
+                }
+            }
+        });
+
+        function performSearch(query) {
+            const searchResults = [];
+            const pages = [
+                { url: 'index.html', title: '首页', keywords: ['热门攻略', '最新更新', '任务', '收集品', '战斗技巧'] },
+                { url: 'missions.html', title: '任务攻略', keywords: ['主线任务', '支线任务', '陌生人任务', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '金牌条件'] },
+                { url: 'mission-detail.html', title: '第一章：雪中绝境', keywords: ['犁刀村', '任务攻略', '新手', '亚瑟·摩根', '范德林德帮', '金牌'] },
+                { url: 'collectibles.html', title: '收集品指南', keywords: ['藏宝图', '传奇动物', '恐龙骨', '香烟卡', '杰克霍尔帮', '剧毒路线', '山狮'] },
+                { url: 'guide.html', title: '游戏指南', keywords: ['新手入门', '马匹养成', '荣誉系统', '经济系统', '赚钱', '操作指南'] },
+                { url: 'combat.html', title: '战斗技巧', keywords: ['死亡之眼', '武器系统', '近战格斗', '狩猎技巧', '手枪', '步枪', '霰弹枪'] },
+                { url: 'videos.html', title: '游戏视频', keywords: ['剧情攻略', '战斗技巧', '探索发现', '搞笑时刻'] }
+            ];
+
+            pages.forEach(page => {
+                if (page.title.toLowerCase().includes(query.toLowerCase()) || 
+                    page.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))) {
+                    searchResults.push(page);
+                }
+            });
+
+            displaySearchResults(searchResults, query);
+        }
+
+        function displaySearchResults(results, query) {
+            const resultsContainer = document.createElement('div');
+            resultsContainer.className = 'search-modal';
+            resultsContainer.innerHTML = `
+                <div class="search-modal-content">
+                    <div class="search-modal-header">
+                        <h3>搜索结果: "${query}"</h3>
+                        <button class="search-modal-close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</button>
+                    </div>
+                    <div class="search-modal-body">
+                        ${results.length > 0 ? 
+                            `<ul>${results.map(r => `<li><a href="${r.url}">${r.title}</a></li>`).join('')}</ul>` : 
+                            '<p>未找到匹配结果，请尝试其他关键词</p>'}
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(resultsContainer);
+            document.body.style.overflow = 'hidden';
+            
+            resultsContainer.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.remove();
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

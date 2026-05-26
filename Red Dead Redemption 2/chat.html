@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI游戏助手 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=Playfair+Display:wght@400;600;700&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body class="chat-page">
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link active">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="chat-container">
+        <div class="chat-header">
+            <div class="chat-avatar">🤖</div>
+            <div class="chat-info">
+                <h2>荒野大镖客 AI 助手</h2>
+                <p>有什么关于RDR2的问题尽管问我！</p>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>你好！我是你的荒野大镖客2 AI助手。请问有什么可以帮你的？</p>
+                    <div class="suggested-questions">
+                        <span class="suggest-label">试试这些问题：</span>
+                        <div class="suggest-list">
+                            <button onclick="sendMessage('怎么获得完美皮毛？')">怎么获得完美皮毛？</button>
+                            <button onclick="sendMessage('传奇动物在哪里？')">传奇动物在哪里？</button>
+                            <button onclick="sendMessage('如何快速赚钱？')">如何快速赚钱？</button>
+                            <button onclick="sendMessage('死亡之眼怎么升级？')">死亡之眼怎么升级？</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="输入你的问题..." autocomplete="off">
+                <button class="send-btn" onclick="sendMessageFromInput()">
+                    <span class="send-icon">➤</span>
+                </button>
+            </div>
+            <div class="input-hints">
+                <span>💡 提示：可以问关于任务攻略、收集品位置、战斗技巧、赚钱方法等问题</span>
+            </div>
+        </div>
+
+        <div class="quick-reference">
+            <h3>📚 热门话题</h3>
+            <div class="quick-tags">
+                <button onclick="sendMessage('恐龙骨位置')">🦴 恐龙骨</button>
+                <button onclick="sendMessage('香烟卡收集')">🃏 香烟卡</button>
+                <button onclick="sendMessage('藏宝图攻略')">🗺️ 藏宝图</button>
+                <button onclick="sendMessage('最佳武器推荐')">🔫 武器推荐</button>
+                <button onclick="sendMessage('马匹养成攻略')">🐴 马匹养成</button>
+                <button onclick="sendMessage('荣誉系统')">⭐ 荣誉系统</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="combat.html">战斗技巧</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">贡献攻略</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        const API_KEY = 'sk-ca56859a79dd412c8f834ea88bbffac3';
+        const BASE_URL = 'https://api.deepseek.com';
+        const MODEL = 'deepseek-v4-flash';
+
+        const messages = [
+            { role: 'system', content: '你是一位专业的《荒野大镖客2》(Red Dead Redemption 2)游戏助手。请用中文回答用户的问题，提供详细、准确的游戏攻略和建议。你的回答应该友好、有帮助，并且符合西部主题风格。' }
+        ];
+
+        async function callDeepSeekAPI(userMessage) {
+            messages.push({ role: 'user', content: userMessage });
+
+            try {
+                const response = await fetch(`${BASE_URL}/chat/completions`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${API_KEY}`
+                    },
+                    body: JSON.stringify({
+                        model: MODEL,
+                        messages: messages,
+                        stream: false,
+                        temperature: 0.7,
+                        max_tokens: 2048
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`API请求失败: ${response.status}`);
+                }
+
+                const data = await response.json();
+                const reply = data.choices[0].message.content;
+                messages.push({ role: 'assistant', content: reply });
+                return reply;
+            } catch (error) {
+                console.error('API调用错误:', error);
+                return '抱歉，我暂时无法回答您的问题。请稍后再试，或者查看我们网站上的攻略内容。';
+            }
+        }
+
+        function sendMessage(message) {
+            const chatMessages = document.getElementById('chat-messages');
+            
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user-message';
+            userMsg.innerHTML = `
+                <div class="message-avatar">👤</div>
+                <div class="message-content">
+                    <p>${escapeHtml(message)}</p>
+                </div>
+            `;
+            chatMessages.appendChild(userMsg);
+
+            const botMsg = document.createElement('div');
+            botMsg.className = 'message bot-message';
+            botMsg.innerHTML = `
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="typing-indicator">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            `;
+            chatMessages.appendChild(botMsg);
+
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            callDeepSeekAPI(message).then(response => {
+                botMsg.innerHTML = `
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <pre>${escapeHtml(response)}</pre>
+                    </div>
+                `;
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            });
+        }
+
+        function sendMessageFromInput() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            
+            if (message) {
+                sendMessage(message);
+                input.value = '';
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        document.getElementById('user-input').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                sendMessageFromInput();
+            }
+        });
+    </script>
+</body>
+</html>

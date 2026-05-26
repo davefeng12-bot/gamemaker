@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏指南 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link active">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="section-title">游戏指南</h1>
+
+        <div class="sidebar">
+            <h3>指南分类</h3>
+            <ul>
+                <li><a href="#beginner">新手入门</a></li>
+                <li><a href="#horse">马匹养成</a></li>
+                <li><a href="#honor">荣誉系统</a></li>
+                <li><a href="#economy">经济系统</a></li>
+            </ul>
+        </div>
+
+        <section id="beginner">
+            <div class="guide-section">
+                <h2>新手入门指南</h2>
+                <p>欢迎来到荒野大镖客2的世界！这里是给新手玩家的入门指南。</p>
+                <h3>基本操作</h3>
+                <ul>
+                    <li><strong>移动：</strong>使用WASD或方向键移动</li>
+                    <li><strong>骑马：</strong>按E上马，使用左摇杆控制方向</li>
+                    <li><strong>互动：</strong>按R键与物品或NPC互动</li>
+                    <li><strong>地图：</strong>按M键打开地图</li>
+                </ul>
+                <h3>生存提示</h3>
+                <ul>
+                    <li>保持核心值（生命值、体力、死神之眼）饱满</li>
+                    <li>定期休息和进食</li>
+                    <li>注意天气变化，寒冷天气会消耗核心值</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="horse">
+            <div class="guide-section">
+                <h2>马匹养成指南</h2>
+                <p>马匹是你在西部世界最忠实的伙伴，了解如何照顾和培养它们。</p>
+                <h3>马匹类型</h3>
+                <ul>
+                    <li><strong>阿拉伯马：</strong>速度快，操控性好</li>
+                    <li><strong>安达卢西亚马：</strong>强壮，适合战斗</li>
+                    <li><strong>夏尔马：</strong>大型马，适合拉货</li>
+                </ul>
+                <h3>马匹默契度</h3>
+                <ul>
+                    <li>经常骑乘可以提升默契度</li>
+                    <li>喂食和刷毛可以增加默契度</li>
+                    <li>默契度越高，马匹表现越好</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="honor">
+            <div class="guide-section">
+                <h2>荣誉系统解析</h2>
+                <p>荣誉值决定了亚瑟在西部世界中的名声和他人对他的看法。</p>
+                <h3>荣誉值的影响</h3>
+                <ul>
+                    <li><strong>高荣誉：</strong>商店折扣、更好的对话选项</li>
+                    <li><strong>低荣誉：</strong>更高的赏金、更多敌人</li>
+                </ul>
+                <h3>如何提升荣誉</h3>
+                <ul>
+                    <li>帮助陌生人</li>
+                    <li>完成任务时选择道德选项</li>
+                    <li>捐赠给营地</li>
+                </ul>
+                <h3>如何降低荣誉</h3>
+                <ul>
+                    <li>抢劫和杀人</li>
+                    <li>攻击平民</li>
+                    <li>偷东西</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="economy">
+            <div class="guide-section">
+                <h2>经济系统指南</h2>
+                <p>在西部世界中，金钱是生存的关键。了解如何赚钱和管理你的财富。</p>
+                <h3>赚钱方法</h3>
+                <ul>
+                    <li><strong>狩猎：</strong>猎杀动物并出售皮毛</li>
+                    <li><strong>抢劫：</strong>抢劫马车、商店和火车</li>
+                    <li><strong>任务：</strong>完成主线和支线任务</li>
+                    <li><strong>收集：</strong>寻找藏宝图和收集品</li>
+                </ul>
+                <h3>消费建议</h3>
+                <ul>
+                    <li>优先购买武器和弹药</li>
+                    <li>升级营地设施</li>
+                    <li>购买更好的马匹</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="combat.html">战斗技巧</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">贡献攻略</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南</p>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

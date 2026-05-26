@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Dead Redemption 2 攻略指南</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Rye&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-logo"></div>
+            <h1 class="hero-title">RED DEAD REDEMPTION 2</h1>
+            <p class="hero-subtitle">荒野大镖客2 完全攻略指南</p>
+            <p class="hero-desc">探索西部世界的终极指南，掌握亚瑟·摩根的命运之旅</p>
+            <div class="hero-buttons">
+                <a href="missions.html" class="btn btn-primary">🤠 开始冒险</a>
+                <a href="collectibles.html" class="btn btn-secondary">💎 收集品全攻略</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">章节任务</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">150+</span>
+                    <span class="stat-label">任务攻略</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">收集指南</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>向下滚动探索</span>
+            <div class="scroll-arrow">▼</div>
+        </div>
+    </section>
+
+    <main class="content-wrapper">
+        <section class="featured-section">
+            <div class="section-header">
+                <h2 class="section-title">🔥 热门攻略</h2>
+                <p class="section-subtitle">最受欢迎的攻略内容</p>
+            </div>
+            <div class="card-grid">
+                <article class="card card-featured">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20Arthur%20Morgan%20snow%20cabin%20western%20landscape&image_size=landscape_16_9" alt="第一章">
+                        <div class="card-badge">第一章</div>
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">🎬 主线任务</div>
+                        <h3 class="card-title">雪中绝境：犁刀村</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐⭐ 简单</span>
+                            <span class="meta-item">⏱️ 30分钟</span>
+                            <span class="meta-item">💰 $500奖励</span>
+                        </div>
+                        <p class="card-desc">了解游戏初期的关键任务，掌握营地管理基础和角色操作，完成金牌评价。</p>
+                        <div class="card-tags">
+                            <span>新手入门</span>
+                            <span>营地系统</span>
+                            <span>基础操作</span>
+                        </div>
+                        <a href="mission-detail.html" class="card-link">查看详细攻略 →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20treasure%20map%20gold%20coins%20cave%20western&image_size=landscape_16_9" alt="藏宝图">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">💎 收集品</div>
+                        <h3 class="card-title">全藏宝图位置</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐⭐⭐ 中等</span>
+                            <span class="meta-item">🎁 稀有奖励</span>
+                        </div>
+                        <p class="card-desc">寻找所有藏宝图和隐藏宝藏，获取丰厚奖励。</p>
+                        <a href="collectibles.html" class="card-link">查看攻略 →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20legendary%20bear%20hunting%20snow%20western&image_size=landscape_16_9" alt="传奇动物">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">🦅 狩猎指南</div>
+                        <h3 class="card-title">传奇动物狩猎</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐⭐⭐⭐ 困难</span>
+                            <span class="meta-item">🎯 16种传奇动物</span>
+                        </div>
+                        <p class="card-desc">追踪并狩猎所有传奇动物，获取稀有材料。</p>
+                        <a href="collectibles.html#legendary" class="card-link">查看攻略 →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20gunfight%20deadeye%20slow%20motion%20western&image_size=landscape_16_9" alt="战斗技巧">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">⚔️ 战斗技巧</div>
+                        <h3 class="card-title">战斗系统详解</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐⭐ 中等</span>
+                            <span class="meta-item">🎯 死亡之眼</span>
+                        </div>
+                        <p class="card-desc">掌握死亡之眼、武器选择和战斗策略。</p>
+                        <a href="combat.html" class="card-link">查看攻略 →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20beautiful%20horse%20sunset%20western%20landscape&image_size=landscape_16_9" alt="马匹养成">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">🐴 角色养成</div>
+                        <h3 class="card-title">马匹养成指南</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐ 简单</span>
+                            <span class="meta-item">🏆 顶级马匹</span>
+                        </div>
+                        <p class="card-desc">获取最佳马匹，提升默契度，成为西部最快的骑手。</p>
+                        <a href="guide.html#horse" class="card-link">查看攻略 →</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-image-wrapper">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20money%20bags%20gold%20bank%20robbery%20western&image_size=landscape_16_9" alt="赚钱方法">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-category">💰 经济系统</div>
+                        <h3 class="card-title">快速赚钱攻略</h3>
+                        <div class="card-meta">
+                            <span class="meta-item">⭐⭐⭐ 中等</span>
+                            <span class="meta-item">💵 日入千金</span>
+                        </div>
+                        <p class="card-desc">多种赚钱方法，从狩猎到抢劫，快速积累财富。</p>
+                        <a href="guide.html#economy" class="card-link">查看攻略 →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h2 class="section-title">⚡ 快速导航</h2>
+            <div class="quick-grid">
+                <a href="missions.html" class="quick-item">
+                    <div class="quick-icon">📋</div>
+                    <span class="quick-label">主线任务</span>
+                </a>
+                <a href="missions.html#side" class="quick-item">
+                    <div class="quick-icon">🗺️</div>
+                    <span class="quick-label">支线任务</span>
+                </a>
+                <a href="collectibles.html" class="quick-item">
+                    <div class="quick-icon">💎</div>
+                    <span class="quick-label">收集品</span>
+                </a>
+                <a href="combat.html" class="quick-item">
+                    <div class="quick-icon">🔫</div>
+                    <span class="quick-label">战斗技巧</span>
+                </a>
+                <a href="guide.html" class="quick-item">
+                    <div class="quick-icon">📖</div>
+                    <span class="quick-label">游戏指南</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <h2 class="section-title">📰 最新更新</h2>
+            <div class="news-grid">
+                <article class="news-item">
+                    <div class="news-date">2024-01-15</div>
+                    <h3><a href="mission-detail.html">新增：第一章主线任务详解</a></h3>
+                    <p>包含完整步骤指南和金牌条件</p>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">2024-01-14</div>
+                    <h3><a href="collectibles.html#cards">新增：香烟卡全收集攻略</a></h3>
+                    <p>144张香烟卡位置全解析</p>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">2024-01-13</div>
+                    <h3><a href="combat.html#melee">新增：近战格斗技巧</a></h3>
+                    <p>徒手搏斗和近战武器使用指南</p>
+                </article>
+                <article class="news-item">
+                    <div class="news-date">2024-01-12</div>
+                    <h3><a href="guide.html#honor">新增：荣誉系统完全解析</a></h3>
+                    <p>善恶值对游戏的影响</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🤠 任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                    <li><a href="missions.html#gold">金牌条件</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>💎 收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                    <li><a href="collectibles.html#cards">香烟卡</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>📖 游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="guide.html#horse">马匹养成</a></li>
+                    <li><a href="guide.html#honor">荣誉系统</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>🎬 游戏视频</h3>
+                <ul>
+                    <li><a href="videos.html#walkthrough">剧情攻略</a></li>
+                    <li><a href="videos.html#combat">战斗技巧</a></li>
+                    <li><a href="videos.html#exploration">探索发现</a></li>
+                    <li><a href="videos.html#funny">搞笑时刻</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南 | 西部世界的终极探索</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        document.getElementById('search-btn').addEventListener('click', function() {
+            const query = document.getElementById('search-input').value.trim();
+            if (query) {
+                performSearch(query);
+            }
+        });
+
+        document.getElementById('search-input').addEventListener('keyup', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    performSearch(query);
+                }
+            }
+        });
+
+        function performSearch(query) {
+            const searchResults = [];
+            const pages = [
+                { url: 'index.html', title: '首页', keywords: ['热门攻略', '最新更新', '任务', '收集品', '战斗技巧'] },
+                { url: 'missions.html', title: '任务攻略', keywords: ['主线任务', '支线任务', '陌生人任务', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '金牌条件'] },
+                { url: 'mission-detail.html', title: '第一章：雪中绝境', keywords: ['犁刀村', '任务攻略', '新手', '亚瑟·摩根', '范德林德帮', '金牌'] },
+                { url: 'collectibles.html', title: '收集品指南', keywords: ['藏宝图', '传奇动物', '恐龙骨', '香烟卡', '杰克霍尔帮', '剧毒路线', '山狮'] },
+                { url: 'guide.html', title: '游戏指南', keywords: ['新手入门', '马匹养成', '荣誉系统', '经济系统', '赚钱', '操作指南'] },
+                { url: 'combat.html', title: '战斗技巧', keywords: ['死亡之眼', '武器系统', '近战格斗', '狩猎技巧', '手枪', '步枪', '霰弹枪'] },
+                { url: 'videos.html', title: '游戏视频', keywords: ['剧情攻略', '战斗技巧', '探索发现', '搞笑时刻'] }
+            ];
+
+            pages.forEach(page => {
+                if (page.title.toLowerCase().includes(query.toLowerCase()) || 
+                    page.keywords.some(keyword => keyword.toLowerCase().includes(query.toLowerCase()))) {
+                    searchResults.push(page);
+                }
+            });
+
+            displaySearchResults(searchResults, query);
+        }
+
+        function displaySearchResults(results, query) {
+            const resultsContainer = document.createElement('div');
+            resultsContainer.className = 'search-modal';
+            resultsContainer.innerHTML = `
+                <div class="search-modal-content">
+                    <div class="search-modal-header">
+                        <h3>搜索结果: "${query}"</h3>
+                        <button class="search-modal-close" onclick="this.parentElement.parentElement.parentElement.remove()">&times;</button>
+                    </div>
+                    <div class="search-modal-body">
+                        ${results.length > 0 ? 
+                            `<ul>${results.map(r => `<li><a href="${r.url}">${r.title}</a></li>`).join('')}</ul>` : 
+                            '<p>未找到匹配结果，请尝试其他关键词</p>'}
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(resultsContainer);
+            document.body.style.overflow = 'hidden';
+            
+            resultsContainer.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.remove();
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

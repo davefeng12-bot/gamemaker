@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收集品指南 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=IBM+Plex+Serif:wght@400;500;600&family=Playfair+Display:wght@400;600;700&family=Rye&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link active">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="section-title">🦴 恐龙骨收集指南</h1>
+        
+        <div class="dinosaur-intro">
+            <div class="intro-card">
+                <h2>🦕 恐龙骨收集介绍</h2>
+                <p>《荒野大镖客2》中共有 <strong>30个恐龙骨</strong> 分布在整个西部世界的各个角落。收集所有恐龙骨后，你将解锁特殊奖励和独特的博物馆展览。</p>
+                <div class="intro-stats">
+                    <div class="stat-box">
+                        <span class="stat-num">30</span>
+                        <span class="stat-text">恐龙骨总数</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">5</span>
+                        <span class="stat-text">分布区域</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-num">1</span>
+                        <span class="stat-text">专属奖励</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tips-card">
+                <h3>💡 收集小贴士</h3>
+                <ul>
+                    <li><strong>鹰眼视觉：</strong>使用鹰眼可以更容易发现隐藏的恐龙骨</li>
+                    <li><strong>偏远地区：</strong>恐龙骨通常位于偏远地区、山顶和悬崖边</li>
+                    <li><strong>地图标记：</strong>靠近恐龙骨时地图会显示白色骨头图标</li>
+                    <li><strong>奖励：</strong>收集全部30个后可获得恐龙骨骼装饰和成就</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="region-tabs">
+            <button class="tab-btn active" data-region="ambarnino">🏔️ 安巴里诺</button>
+            <button class="tab-btn" data-region="newhanover">🏜️ 新汉诺威</button>
+            <button class="tab-btn" data-region="lemoyne">🌿 莱莫恩</button>
+            <button class="tab-btn" data-region="westelizabeth">🌄 西伊丽莎白</button>
+            <button class="tab-btn" data-region="newaustin">🏜️ 新奥斯汀</button>
+        </div>
+
+        <div class="dinosaur-grid">
+            <div class="region-section" id="ambarnino">
+                <h3>🏔️ 安巴里诺地区（6个）</h3>
+                <div class="bone-list">
+                    <div class="bone-item" data-bone="1">
+                        <span class="bone-num">01</span>
+                        <div class="bone-info">
+                            <h4>股骨 - 瓦匹提保留地</h4>
+                            <p><strong>位置：</strong>瓦匹提保留地东北方的山坡上</p>
+                            <p><strong>坐标：</strong>X: -1350, Y: 560</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-1')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="2">
+                        <span class="bone-num">02</span>
+                        <div class="bone-info">
+                            <h4>胫骨 - 安巴里诺山脉</h4>
+                            <p><strong>位置：</strong>安巴里诺山脉东部，伊莎贝拉湖附近</p>
+                            <p><strong>坐标：</strong>X: -1180, Y: 350</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-2')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="3">
+                        <span class="bone-num">03</span>
+                        <div class="bone-info">
+                            <h4>椎骨 - 峡谷边缘</h4>
+                            <p><strong>位置：</strong>安巴里诺南部峡谷边缘</p>
+                            <p><strong>坐标：</strong>X: -1050, Y: 200</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-3')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="4">
+                        <span class="bone-num">04</span>
+                        <div class="bone-info">
+                            <h4>肋骨 - 森林深处</h4>
+                            <p><strong>位置：</strong>安巴里诺西部森林</p>
+                            <p><strong>坐标：</strong>X: -1450, Y: 420</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-4')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="5">
+                        <span class="bone-num">05</span>
+                        <div class="bone-info">
+                            <h4>头骨 - 山顶</h4>
+                            <p><strong>位置：</strong>安巴里诺最高山峰</p>
+                            <p><strong>坐标：</strong>X: -1250, Y: 480</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-5')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="6">
+                        <span class="bone-num">06</span>
+                        <div class="bone-info">
+                            <h4>骨盆 - 河流沿岸</h4>
+                            <p><strong>位置：</strong>安巴里诺北部河流沿岸</p>
+                            <p><strong>坐标：</strong>X: -1100, Y: 520</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-6')">✅</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="region-section" id="newhanover" style="display: none;">
+                <h3>🏜️ 新汉诺威地区（6个）</h3>
+                <div class="bone-list">
+                    <div class="bone-item" data-bone="7">
+                        <span class="bone-num">07</span>
+                        <div class="bone-info">
+                            <h4>肩胛骨 - 瓦伦丁附近</h4>
+                            <p><strong>位置：</strong>瓦伦丁西北方的山坡</p>
+                            <p><strong>坐标：</strong>X: -520, Y: 580</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-7')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="8">
+                        <span class="bone-num">08</span>
+                        <div class="bone-info">
+                            <h4>尾骨 - 坎伯兰森林</h4>
+                            <p><strong>位置：</strong>坎伯兰森林东部</p>
+                            <p><strong>坐标：</strong>X: -680, Y: 450</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-8')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="9">
+                        <span class="bone-num">09</span>
+                        <div class="bone-info">
+                            <h4>指骨 - 草莓镇</h4>
+                            <p><strong>位置：</strong>草莓镇南部山谷</p>
+                            <p><strong>坐标：</strong>X: -850, Y: 380</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-9')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="10">
+                        <span class="bone-num">10</span>
+                        <div class="bone-info">
+                            <h4>趾骨 - 黑水镇</h4>
+                            <p><strong>位置：</strong>黑水镇北部</p>
+                            <p><strong>坐标：</strong>X: -800, Y: -120</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-10')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="11">
+                        <span class="bone-num">11</span>
+                        <div class="bone-info">
+                            <h4>股骨 - 大平原</h4>
+                            <p><strong>位置：</strong>新汉诺威南部大平原</p>
+                            <p><strong>坐标：</strong>X: -550, Y: 280</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-11')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="12">
+                        <span class="bone-num">12</span>
+                        <div class="bone-info">
+                            <h4>肋骨 - 沼泽边缘</h4>
+                            <p><strong>位置：</strong>新汉诺威东部沼泽边缘</p>
+                            <p><strong>坐标：</strong>X: -380, Y: 350</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-12')">✅</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="region-section" id="lemoyne" style="display: none;">
+                <h3>🌿 莱莫恩地区（8个）</h3>
+                <div class="bone-list">
+                    <div class="bone-item" data-bone="13">
+                        <span class="bone-num">13</span>
+                        <div class="bone-info">
+                            <h4>头骨 - 圣丹尼斯</h4>
+                            <p><strong>位置：</strong>圣丹尼斯东南方沼泽</p>
+                            <p><strong>坐标：</strong>X: 280, Y: -180</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-13')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="14">
+                        <span class="bone-num">14</span>
+                        <div class="bone-info">
+                            <h4>椎骨 - 罗兹镇</h4>
+                            <p><strong>位置：</strong>罗兹镇东部</p>
+                            <p><strong>坐标：</strong>X: 200, Y: 120</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-14')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="15">
+                        <span class="bone-num">15</span>
+                        <div class="bone-info">
+                            <h4>骨盆 - 布莱斯韦特庄园</h4>
+                            <p><strong>位置：</strong>布莱斯韦特庄园南部</p>
+                            <p><strong>坐标：</strong>X: 150, Y: 50</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-15')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="16">
+                        <span class="bone-num">16</span>
+                        <div class="bone-info">
+                            <h4>胫骨 - 安尼斯堡</h4>
+                            <p><strong>位置：</strong>安尼斯堡东部悬崖</p>
+                            <p><strong>坐标：</strong>X: 520, Y: 180</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-16')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="17">
+                        <span class="bone-num">17</span>
+                        <div class="bone-info">
+                            <h4>肩胛骨 - 沼泽深处</h4>
+                            <p><strong>位置：</strong>莱莫恩南部沼泽深处</p>
+                            <p><strong>坐标：</strong>X: 320, Y: -280</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-17')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="18">
+                        <span class="bone-num">18</span>
+                        <div class="bone-info">
+                            <h4>肋骨 - 康沃尔石油厂</h4>
+                            <p><strong>位置：</strong>康沃尔石油厂附近</p>
+                            <p><strong>坐标：</strong>X: 380, Y: 80</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-18')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="19">
+                        <span class="bone-num">19</span>
+                        <div class="bone-info">
+                            <h4>尾骨 - 河狸岩洞</h4>
+                            <p><strong>位置：</strong>河狸岩洞附近</p>
+                            <p><strong>坐标：</strong>X: 600, Y: 120</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-19')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="20">
+                        <span class="bone-num">20</span>
+                        <div class="bone-info">
+                            <h4>指骨 - 湖中小岛</h4>
+                            <p><strong>位置：</strong>莱莫恩北部湖中小岛</p>
+                            <p><strong>坐标：</strong>X: 80, Y: 180</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-20')">✅</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="region-section" id="westelizabeth" style="display: none;">
+                <h3>🌄 西伊丽莎白地区（6个）</h3>
+                <div class="bone-list">
+                    <div class="bone-item" data-bone="21">
+                        <span class="bone-num">21</span>
+                        <div class="bone-info">
+                            <h4>头骨 - 黑水镇西部</h4>
+                            <p><strong>位置：</strong>黑水镇西部山坡</p>
+                            <p><strong>坐标：</strong>X: -980, Y: -100</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-21')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="22">
+                        <span class="bone-num">22</span>
+                        <div class="bone-info">
+                            <h4>椎骨 - 新月牧场</h4>
+                            <p><strong>位置：</strong>新月牧场南部</p>
+                            <p><strong>坐标：</strong>X: -750, Y: -250</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-22')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="23">
+                        <span class="bone-num">23</span>
+                        <div class="bone-info">
+                            <h4>骨盆 - 马掌望台</h4>
+                            <p><strong>位置：</strong>马掌望台附近</p>
+                            <p><strong>坐标：</strong>X: -620, Y: -380</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-23')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="24">
+                        <span class="bone-num">24</span>
+                        <div class="bone-info">
+                            <h4>胫骨 - 草莓镇南部</h4>
+                            <p><strong>位置：</strong>草莓镇南部平原</p>
+                            <p><strong>坐标：</strong>X: -780, Y: 250</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-24')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="25">
+                        <span class="bone-num">25</span>
+                        <div class="bone-info">
+                            <h4>肩胛骨 - 大平原西部</h4>
+                            <p><strong>位置：</strong>西伊丽莎白西部大平原</p>
+                            <p><strong>坐标：</strong>X: -1050, Y: -200</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-25')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="26">
+                        <span class="bone-num">26</span>
+                        <div class="bone-info">
+                            <h4>肋骨 - 森林南部</h4>
+                            <p><strong>位置：</strong>西伊丽莎白南部森林</p>
+                            <p><strong>坐标：</strong>X: -680, Y: -450</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-26')">✅</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="region-section" id="newaustin" style="display: none;">
+                <h3>🏜️ 新奥斯汀地区（4个）</h3>
+                <div class="bone-list">
+                    <div class="bone-item" data-bone="27">
+                        <span class="bone-num">27</span>
+                        <div class="bone-info">
+                            <h4>头骨 - 犰狳镇</h4>
+                            <p><strong>位置：</strong>犰狳镇北部</p>
+                            <p><strong>坐标：</strong>X: -520, Y: -950</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-27')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="28">
+                        <span class="bone-num">28</span>
+                        <div class="bone-info">
+                            <h4>椎骨 - 沙漠峡谷</h4>
+                            <p><strong>位置：</strong>新奥斯汀西部峡谷</p>
+                            <p><strong>坐标：</strong>X: -750, Y: -850</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-28')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="29">
+                        <span class="bone-num">29</span>
+                        <div class="bone-info">
+                            <h4>骨盆 - 边境地区</h4>
+                            <p><strong>位置：</strong>新奥斯汀南部边境</p>
+                            <p><strong>坐标：</strong>X: -350, Y: -1080</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-29')">✅</button>
+                    </div>
+                    <div class="bone-item" data-bone="30">
+                        <span class="bone-num">30</span>
+                        <div class="bone-info">
+                            <h4>胫骨 - 墨西哥边境</h4>
+                            <p><strong>位置：</strong>靠近墨西哥边境的山区</p>
+                            <p><strong>坐标：</strong>X: -620, Y: -1050</p>
+                        </div>
+                        <button class="bone-checkbox" onclick="toggleBone('bone-30')">✅</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="progress-summary">
+            <div class="progress-header">
+                <h3>📊 收集进度</h3>
+                <div class="progress-display">
+                    <span id="collected-count">0</span> / 30
+                    <span id="collected-percent">0%</span>
+                </div>
+            </div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar-fill" id="progress-fill"></div>
+            </div>
+            <div class="progress-message" id="progress-message">
+                开始收集恐龙骨吧！使用上方区域标签浏览不同地区的骨头位置。
+            </div>
+        </div>
+
+        <div class="reward-section">
+            <h3>🏆 收集奖励</h3>
+            <div class="reward-grid">
+                <div class="reward-card">
+                    <span class="reward-icon">🏅</span>
+                    <h4>恐龙专家</h4>
+                    <p>收集所有30个恐龙骨后解锁</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">🖼️</span>
+                    <h4>恐龙骨骼装饰</h4>
+                    <p>可在营地展示完整恐龙骨架</p>
+                </div>
+                <div class="reward-card">
+                    <span class="reward-icon">📜</span>
+                    <h4>博物馆展览</h4>
+                    <p>圣丹尼斯博物馆展出你的发现</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="combat.html">战斗技巧</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">贡献攻略</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南</p>
+        </div>
+    </footer>
+
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        const tabs = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.region-section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const region = tab.dataset.region;
+                sections.forEach(sec => {
+                    sec.style.display = sec.id === region ? 'block' : 'none';
+                });
+            });
+        });
+
+        const BONES_KEY = 'rdr2_dinosaur_bones';
+
+        function loadBones() {
+            const saved = localStorage.getItem(BONES_KEY);
+            return saved ? JSON.parse(saved) : [];
+        }
+
+        function saveBones(bones) {
+            localStorage.setItem(BONES_KEY, JSON.stringify(bones));
+        }
+
+        function toggleBone(boneId) {
+            const bones = loadBones();
+            const index = bones.indexOf(boneId);
+            
+            if (index > -1) {
+                bones.splice(index, 1);
+            } else {
+                bones.push(boneId);
+            }
+            
+            saveBones(bones);
+            updateProgress();
+            updateButton(boneId, bones.includes(boneId));
+        }
+
+        function updateButton(boneId, completed) {
+            const button = document.querySelector(`button[onclick="toggleBone('${boneId}')"]`);
+            if (button) {
+                button.classList.toggle('completed', completed);
+                button.textContent = completed ? '✅' : '⬜';
+            }
+        }
+
+        function updateProgress() {
+            const bones = loadBones();
+            const collected = bones.length;
+            const percent = Math.round((collected / 30) * 100);
+            
+            document.getElementById('collected-count').textContent = collected;
+            document.getElementById('collected-percent').textContent = `${percent}%`;
+            document.getElementById('progress-fill').style.width = `${percent}%`;
+            
+            const message = document.getElementById('progress-message');
+            if (collected === 0) {
+                message.textContent = '开始收集恐龙骨吧！使用上方区域标签浏览不同地区的骨头位置。';
+            } else if (collected === 30) {
+                message.textContent = '🎉 恭喜！你已收集所有恐龙骨！前往圣丹尼斯博物馆领取奖励吧！';
+            } else {
+                message.textContent = `继续努力！还剩 ${30 - collected} 个恐龙骨等待发现。`;
+            }
+        }
+
+        function initBones() {
+            const bones = loadBones();
+            bones.forEach(boneId => {
+                updateButton(boneId, true);
+            });
+            updateProgress();
+        }
+
+        document.addEventListener('DOMContentLoaded', initBones);
+    </script>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏视频 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="videos.html" class="nav-link active">🎬 游戏视频</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                <li><a href="videos.html">🎬 游戏视频</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="section-title">游戏视频</h1>
+
+        <div class="sidebar">
+            <h3>视频分类</h3>
+            <ul>
+                <li><a href="#walkthrough">剧情攻略</a></li>
+                <li><a href="#combat">战斗技巧</a></li>
+                <li><a href="#exploration">探索发现</a></li>
+                <li><a href="#funny">搞笑时刻</a></li>
+            </ul>
+        </div>
+
+        <section id="walkthrough">
+            <h2 class="section-title">剧情攻略视频</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1Tb411i74R')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20Arthur%20Morgan%20cabin%20snow%20western&image_size=landscape_16_9" alt="剧情视频1">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">02:34:56</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>【荒野大镖客2】第一章全流程</h3>
+                        <p class="video-meta">作者: RDR2攻略组 | 播放: 120万</p>
+                        <p class="video-desc">第一章犁刀村完整流程攻略</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1sb411i7aT')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20train%20robbery%20action%20western&image_size=landscape_16_9" alt="剧情视频2">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">25:40</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>火车抢劫完美攻略</h3>
+                        <p class="video-meta">作者: 西部玩家 | 播放: 85万</p>
+                        <p class="video-desc">最安全高效的火车抢劫方法</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1At411g7cJ')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20final%20mission%20sunset%20emotional&image_size=landscape_16_9" alt="剧情视频3">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">45:22</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>第六章结局全解析</h3>
+                        <p class="video-meta">作者: 游戏解说员 | 播放: 200万</p>
+                        <p class="video-desc">深入分析游戏结局的深意</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="combat">
+            <h2 class="section-title">战斗技巧视频</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1Mt411o7mN')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20gunfight%20dead%20eye%20slow%20motion&image_size=landscape_16_9" alt="战斗视频1">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">18:30</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>死亡之眼全技巧教学</h3>
+                        <p class="video-meta">作者: 战术大师 | 播放: 95万</p>
+                        <p class="video-desc">掌握死亡之眼高级用法</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1zb411i7aE')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20legendary%20animal%20hunting%20bear&image_size=landscape_16_9" alt="战斗视频2">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">22:15</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>传奇动物全狩猎指南</h3>
+                        <p class="video-meta">作者: 猎人杰克 | 播放: 78万</p>
+                        <p class="video-desc">狩猎所有传奇动物技巧</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exploration">
+            <h2 class="section-title">探索发现视频</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1Qt411o7L8')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20hidden%20location%20cave%20treasure&image_size=landscape_16_9" alt="探索视频1">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">30:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>隐藏地点大揭秘</h3>
+                        <p class="video-meta">作者: 探险家 | 播放: 156万</p>
+                        <p class="video-desc">游戏中最神秘的隐藏地点</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1bt411i7aK')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20dinosaur%20bones%20excavation&image_size=landscape_16_9" alt="探索视频2">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">25:30</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>恐龙骨全位置收集</h3>
+                        <p class="video-meta">作者: 考古学家 | 播放: 110万</p>
+                        <p class="video-desc">30个恐龙骨位置全攻略</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="funny">
+            <h2 class="section-title">搞笑时刻</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1ht411o7cQ')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20funny%20moment%20horse%20fall&image_size=landscape_16_9" alt="搞笑视频1">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">15:20</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>RDR2搞笑时刻合集</h3>
+                        <p class="video-meta">作者: 欢乐玩家 | 播放: 230万</p>
+                        <p class="video-desc">令人捧腹的游戏搞笑瞬间</p>
+                    </div>
+                </div>
+
+                <div class="video-card">
+                    <div class="video-thumbnail" onclick="openBilibiliVideo('BV1wt411o7cR')">
+                        <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=Red%20Dead%20Redemption%202%20glitch%20funny%20animation&image_size=landscape_16_9" alt="搞笑视频2">
+                        <div class="play-button">▶</div>
+                        <div class="video-duration">18:45</div>
+                    </div>
+                    <div class="video-info">
+                        <h3>游戏BUG搞笑合集</h3>
+                        <p class="video-meta">作者: BUG猎人 | 播放: 180万</p>
+                        <p class="video-desc">那些让人哭笑不得的BUG</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="combat.html">战斗技巧</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏视频</h3>
+                <ul>
+                    <li><a href="videos.html">剧情攻略</a></li>
+                    <li><a href="videos.html#combat">战斗技巧</a></li>
+                    <li><a href="videos.html#funny">搞笑时刻</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南</p>
+        </div>
+    </footer>
+
+    <div id="video-modal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideo()">×</span>
+            <div id="video-player">
+                <iframe id="bilibili-player" width="100%" height="450" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/search.js"></script>
+    <script>
+        function openBilibiliVideo(bvId) {
+            const url = `https://player.bilibili.com/player.html?bvid=${bvId}&page=1`;
+            document.getElementById('bilibili-player').src = url;
+            document.getElementById('video-modal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideo() {
+            document.getElementById('video-modal').style.display = 'none';
+            document.getElementById('bilibili-player').src = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (e.target.classList.contains('video-modal')) {
+                closeVideo();
+            }
+        });
+    </script>
+</body>
+</html>

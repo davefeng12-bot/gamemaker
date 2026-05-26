@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>任务攻略 - RDR2攻略站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo-container">
+                <div class="logo-icon"></div>
+                <h1>RDR2 攻略</h1>
+            </div>
+            <div class="nav-links-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">🏜️ 首页</a></li>
+                    <li><a href="missions.html" class="nav-link active">🔫 任务攻略</a></li>
+                    <li><a href="collectibles.html" class="nav-link">💎 收集品</a></li>
+                    <li><a href="guide.html" class="nav-link">📖 游戏指南</a></li>
+                    <li><a href="combat.html" class="nav-link">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html" class="nav-link">🤖 AI助手</a></li>
+                </ul>
+            </div>
+            <div class="search-box-wrapper">
+                <input type="text" placeholder="搜索攻略..." class="search-input" id="search-input">
+                <button class="search-btn" id="search-btn">搜索</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </nav>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-search">
+                <input type="text" placeholder="搜索攻略..." class="mobile-search-input" id="mobile-search-input">
+            </div>
+            <ul>
+                <li><a href="index.html">🏜️ 首页</a></li>
+                <li><a href="missions.html">🔫 任务攻略</a></li>
+                <li><a href="collectibles.html">💎 收集品</a></li>
+                <li><a href="guide.html">📖 游戏指南</a></li>
+                <li><a href="combat.html">⚔️ 战斗技巧</a></li>
+                    <li><a href="chat.html">🤖 AI助手</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="progress-dashboard">
+            <div class="dashboard-header">
+                <h2 class="dashboard-title">🎯 任务进度追踪器</h2>
+                <div class="dashboard-actions">
+                    <button class="btn-sync" onclick="syncProgress()">🔄 同步进度</button>
+                    <button class="btn-reset" onclick="resetProgress()">🗑️ 重置进度</button>
+                </div>
+            </div>
+            
+            <div class="progress-stats">
+                <div class="progress-item">
+                    <div class="progress-icon">📜</div>
+                    <div class="progress-info">
+                        <div class="progress-label">主线任务</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="main-progress"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="main-completed">0</span> / <span id="main-total">6</span>
+                            <span id="main-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-item">
+                    <div class="progress-icon">⭐</div>
+                    <div class="progress-info">
+                        <div class="progress-label">支线任务</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="side-progress"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="side-completed">0</span> / <span id="side-total">25</span>
+                            <span id="side-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="progress-item">
+                    <div class="progress-icon">🏆</div>
+                    <div class="progress-info">
+                        <div class="progress-label">全成就</div>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="achievement-progress"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span id="achievement-completed">0</span> / <span id="achievement-total">52</span>
+                            <span id="achievement-percent">0%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="last-update">
+                上次访问：<span id="last-visit">首次访问</span>
+            </div>
+        </div>
+        
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span class="filter-label">分类：</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">全部</button>
+                    <button class="filter-btn" data-filter="main">主线</button>
+                    <button class="filter-btn" data-filter="side">支线</button>
+                    <button class="filter-btn" data-filter="stranger">陌生人</button>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <span class="filter-label">难度：</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-difficulty="all">全部</button>
+                    <button class="filter-btn" data-difficulty="easy">简单</button>
+                    <button class="filter-btn" data-difficulty="medium">中等</button>
+                    <button class="filter-btn" data-difficulty="hard">困难</button>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <span class="filter-label">排序：</span>
+                <select class="sort-select" id="sort-select">
+                    <option value="chapter">章节顺序</option>
+                    <option value="difficulty">难度</option>
+                    <option value="recommended">推荐顺序</option>
+                </select>
+            </div>
+        </div>
+        
+        <h1 class="section-title">任务攻略</h1>
+        
+        <div class="sidebar">
+            <h3>任务分类</h3>
+            <ul>
+                <li><a href="#main">主线任务</a></li>
+                <li><a href="#side">支线任务</a></li>
+                <li><a href="#stranger">陌生人任务</a></li>
+            </ul>
+        </div>
+
+        <section id="main">
+            <h2 class="section-title">主线任务</h2>
+            <div class="card-grid">
+                <article class="card" data-category="main" data-difficulty="easy" data-chapter="1">
+                    <div class="card-image-wrapper" data-icon="🏔️">
+                        <img src="images/mission-1.jpg" alt="犁刀村" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 45分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第一章：犁刀村</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>简单</span>
+                            <span>前期</span>
+                        </div>
+                        <p class="card-desc">游戏的开端，了解范德林德帮的处境，学习基本操作和营地生活。</p>
+                        <div class="card-tags">
+                            <span>新手友好</span>
+                            <span>剧情重要</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-1')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="main" data-difficulty="easy" data-chapter="2">
+                    <div class="card-image-wrapper" data-icon="🏜️">
+                        <img src="images/mission-2.jpg" alt="马掌望台" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 60分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第二章：马掌望台</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>简单</span>
+                            <span>前期</span>
+                        </div>
+                        <p class="card-desc">帮派在新营地安顿下来，开始策划更大的行动。</p>
+                        <div class="card-tags">
+                            <span>营地建设</span>
+                            <span>剧情重要</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-2')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="main" data-difficulty="medium" data-chapter="3">
+                    <div class="card-image-wrapper" data-icon="🌲">
+                        <img src="images/mission-3.jpg" alt="克莱蒙斯" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-time">⏱️ 90分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第三章：克莱蒙斯据点</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>中等</span>
+                            <span>中期</span>
+                        </div>
+                        <p class="card-desc">深入沼泽地带，与当地势力发生冲突。</p>
+                        <div class="card-tags">
+                            <span>沼泽探险</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-3')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="main" data-difficulty="medium" data-chapter="4">
+                    <div class="card-image-wrapper" data-icon="🏜️">
+                        <img src="images/mission-4.jpg" alt="草莓镇" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 120分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第四章：草莓镇</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>中等</span>
+                            <span>中期</span>
+                        </div>
+                        <p class="card-desc">帮派面临重大抉择，剧情走向关键转折点。</p>
+                        <div class="card-tags">
+                            <span>关键剧情</span>
+                            <span>情感冲击</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-4')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="main" data-difficulty="hard" data-chapter="5">
+                    <div class="card-image-wrapper" data-icon="🌴">
+                        <img src="images/mission-5.jpg" alt="瓜马岛" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 150分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第五章：瓜马</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>困难</span>
+                            <span>后期</span>
+                        </div>
+                        <p class="card-desc">被困在热带岛屿，必须找到逃脱的方法。</p>
+                        <div class="card-tags">
+                            <span>热带探险</span>
+                            <span>高难度</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-5')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="main" data-difficulty="hard" data-chapter="6">
+                    <div class="card-image-wrapper" data-icon="🌅">
+                        <img src="images/mission-6.jpg" alt="尾声" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">主线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 180分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">第六章与尾声</h3>
+                        <div class="card-meta">
+                            <span>主线任务</span>
+                            <span>困难</span>
+                            <span>后期</span>
+                        </div>
+                        <p class="card-desc">故事的终章，亚瑟的命运将在此揭晓。</p>
+                        <div class="card-tags">
+                            <span>最终章</span>
+                            <span>情感结局</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('chapter-6')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="side">
+            <h2 class="section-title">支线任务</h2>
+            <div class="card-grid">
+                <article class="card" data-category="side" data-difficulty="hard">
+                    <div class="card-image-wrapper" data-icon="🏪">
+                        <img src="images/side-1.jpg" alt="抢劫任务" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">支线</div>
+                        <div class="card-stats">
+                            <span class="stat-time">⏱️ 30分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">抢劫任务</h3>
+                        <div class="card-meta">
+                            <span>支线任务</span>
+                            <span>困难</span>
+                            <span>中期</span>
+                        </div>
+                        <p class="card-desc">参与各种抢劫任务，获取丰厚报酬。</p>
+                        <div class="card-tags">
+                            <span>高收益</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('side-robbery')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card" data-category="side" data-difficulty="hard">
+                    <div class="card-image-wrapper" data-icon="🚂">
+                        <img src="images/side-2.jpg" alt="火车抢劫" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">支线</div>
+                        <div class="card-stats">
+                            <span class="stat-hot">🔥 热门</span>
+                            <span class="stat-time">⏱️ 45分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">火车抢劫</h3>
+                        <div class="card-meta">
+                            <span>支线任务</span>
+                            <span>困难</span>
+                            <span>中期</span>
+                        </div>
+                        <p class="card-desc">拦截并抢劫行驶中的火车。</p>
+                        <div class="card-tags">
+                            <span>高收益</span>
+                            <span>高风险</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('side-train')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="stranger">
+            <h2 class="section-title">陌生人任务</h2>
+            <div class="card-grid">
+                <article class="card" data-category="stranger" data-difficulty="medium">
+                    <div class="card-image-wrapper" data-icon="🤠">
+                        <img src="images/stranger-1.jpg" alt="陌生人" onerror="this.src=''; this.parentElement.classList.add('fallback-image'); this.style.display='none';">
+                        <div class="card-badge">陌生人</div>
+                        <div class="card-stats">
+                            <span class="stat-time">⏱️ 60分钟</span>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">全陌生人任务汇总</h3>
+                        <div class="card-meta">
+                            <span>陌生人任务</span>
+                            <span>中等</span>
+                            <span>全期</span>
+                        </div>
+                        <p class="card-desc">遇到各种有趣的陌生人，帮助他们完成特殊任务。</p>
+                        <div class="card-tags">
+                            <span>趣味剧情</span>
+                            <span>隐藏内容</span>
+                        </div>
+                        <div class="card-actions">
+                            <a href="mission-detail.html" class="card-link">查看攻略 →</a>
+                            <button class="btn-complete" onclick="toggleComplete('stranger-all')">✅ 标记完成</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>任务攻略</h3>
+                <ul>
+                    <li><a href="missions.html">主线任务</a></li>
+                    <li><a href="missions.html#side">支线任务</a></li>
+                    <li><a href="missions.html#stranger">陌生人任务</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>收集指南</h3>
+                <ul>
+                    <li><a href="collectibles.html">藏宝图</a></li>
+                    <li><a href="collectibles.html#legendary">传奇动物</a></li>
+                    <li><a href="collectibles.html#dinosaur">恐龙骨</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>游戏指南</h3>
+                <ul>
+                    <li><a href="guide.html">入门指南</a></li>
+                    <li><a href="combat.html">战斗技巧</a></li>
+                    <li><a href="guide.html#economy">经济系统</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>关于我们</h3>
+                <ul>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">贡献攻略</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 RDR2攻略站 | 荒野大镖客2攻略指南</p>
+        </div>
+    </footer>
+    <script src="js/search.js"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileNav = document.getElementById('mobile-nav');
+            mobileNav.classList.toggle('show');
+        }
+
+        const PROGRESS_KEY = 'rdr2_progress';
+        const LAST_VISIT_KEY = 'rdr2_last_visit';
+
+        function loadProgress() {
+            const saved = localStorage.getItem(PROGRESS_KEY);
+            if (saved) {
+                return JSON.parse(saved);
+            }
+            return {
+                main: ['chapter-1', 'chapter-2', 'chapter-3', 'chapter-4', 'chapter-5', 'chapter-6'],
+                side: ['side-robbery', 'side-train'],
+                stranger: ['stranger-all'],
+                completed: []
+            };
+        }
+
+        function saveProgress(progress) {
+            localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+        }
+
+        function updateProgressDisplay() {
+            const progress = loadProgress();
+            const mainCompleted = progress.completed.filter(id => id.startsWith('chapter')).length;
+            const sideCompleted = progress.completed.filter(id => id.startsWith('side')).length;
+            const achievementCompleted = Math.round((mainCompleted + sideCompleted) * 2);
+
+            document.getElementById('main-completed').textContent = mainCompleted;
+            document.getElementById('main-percent').textContent = `${Math.round((mainCompleted / 6) * 100)}%`;
+            document.getElementById('main-progress').style.width = `${(mainCompleted / 6) * 100}%`;
+
+            document.getElementById('side-completed').textContent = sideCompleted;
+            document.getElementById('side-percent').textContent = `${Math.round((sideCompleted / 25) * 100)}%`;
+            document.getElementById('side-progress').style.width = `${(sideCompleted / 25) * 100}%`;
+
+            document.getElementById('achievement-completed').textContent = achievementCompleted;
+            document.getElementById('achievement-percent').textContent = `${Math.round((achievementCompleted / 52) * 100)}%`;
+            document.getElementById('achievement-progress').style.width = `${(achievementCompleted / 52) * 100}%`;
+
+            const lastVisit = localStorage.getItem(LAST_VISIT_KEY);
+            if (lastVisit) {
+                document.getElementById('last-visit').textContent = new Date(lastVisit).toLocaleString('zh-CN');
+            }
+        }
+
+        function toggleComplete(taskId) {
+            const progress = loadProgress();
+            const index = progress.completed.indexOf(taskId);
+            
+            if (index > -1) {
+                progress.completed.splice(index, 1);
+            } else {
+                progress.completed.push(taskId);
+            }
+            
+            saveProgress(progress);
+            updateProgressDisplay();
+            
+            const buttons = document.querySelectorAll(`button[onclick="toggleComplete('${taskId}')"]`);
+            buttons.forEach(btn => {
+                if (progress.completed.includes(taskId)) {
+                    btn.textContent = '✅ 已完成';
+                    btn.classList.add('completed');
+                } else {
+                    btn.textContent = '✅ 标记完成';
+                    btn.classList.remove('completed');
+                }
+            });
+        }
+
+        function syncProgress() {
+            updateProgressDisplay();
+            alert('进度已同步！');
+        }
+
+        function resetProgress() {
+            if (confirm('确定要重置所有进度吗？此操作不可撤销。')) {
+                localStorage.removeItem(PROGRESS_KEY);
+                updateProgressDisplay();
+                document.querySelectorAll('.btn-complete').forEach(btn => {
+                    btn.textContent = '✅ 标记完成';
+                    btn.classList.remove('completed');
+                });
+                alert('进度已重置！');
+            }
+        }
+
+        function initFilters() {
+            const categoryButtons = document.querySelectorAll('.filter-btn[data-filter]');
+            const difficultyButtons = document.querySelectorAll('.filter-btn[data-difficulty]');
+            const sortSelect = document.getElementById('sort-select');
+            const cards = document.querySelectorAll('.card');
+
+            let activeCategory = 'all';
+            let activeDifficulty = 'all';
+
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.dataset.filter;
+                    filterCards();
+                });
+            });
+
+            difficultyButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    difficultyButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeDifficulty = btn.dataset.difficulty;
+                    filterCards();
+                });
+            });
+
+            function filterCards() {
+                cards.forEach(card => {
+                    const categoryMatch = activeCategory === 'all' || card.dataset.category === activeCategory;
+                    const difficultyMatch = activeDifficulty === 'all' || card.dataset.difficulty === activeDifficulty;
+                    
+                    if (categoryMatch && difficultyMatch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateProgressDisplay();
+            initFilters();
+            
+            localStorage.setItem(LAST_VISIT_KEY, new Date().toISOString());
+        });
+    </script>
+</body>
+</html>
